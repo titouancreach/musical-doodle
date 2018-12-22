@@ -16,3 +16,14 @@ services:
     command: ["npm", "run", "start"]
     ports:
       - "3000:3000"
+  nginx:
+    image: nginx
+    working_dir: "/etc/nginx"
+    volumes:
+      - ./nginx:/etc/nginx
+    command: ["service", "nginx", "start"]
+    ports:
+      - "80:80"
+    links:
+      - server
+      - front
