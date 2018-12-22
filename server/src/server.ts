@@ -10,6 +10,6 @@ router.get("/*", async ctx => {
 
 app.use(router.routes());
 
-app.listen(3000);
+app.listen(5000);
 
 console.log("Server running on port 3000");

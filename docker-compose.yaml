@@ -7,4 +7,12 @@ services:
       - ./server:/server
     command: ["npm", "run", "watch-server"]
     ports:
+      - "5000:5000"
+  front:
+    image: node:alpine
+    working_dir: "/front"
+    volumes:
+      - ./front:/front
+    command: ["npm", "run", "start"]
+    ports:
       - "3000:3000"
