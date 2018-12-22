@@ -1,0 +1,10 @@
+version: "3"
+services:
+  server:
+    image: node:alpine
+    working_dir: "/server"
+    volumes:
+      - ./server:/server
+    command: ["npm", "run", "watch-server"]
+    ports:
+      - "3000:3000"
