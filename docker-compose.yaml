@@ -16,6 +16,14 @@ services:
     command: ["npm", "run", "start"]
     ports:
       - "3000:3000"
+  malicious_front:
+    image: node:alpine
+    working_dir: "/malicious_front"
+    volumes:
+      - ./malicious_front:/malicious_front
+    command: ["npm", "run", "start"]
+    ports:
+      - "7000:7000"
   nginx:
     image: nginx
     working_dir: "/etc/nginx"
