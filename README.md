@@ -14,6 +14,7 @@ attacker:
   
   ## Run: 
    
+Run npm install in ./front ./server and ./malicious_front
 ```
 docker-compose up -d
 ```
