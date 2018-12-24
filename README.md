@@ -11,3 +11,14 @@ victim:
 attacker:
   - server: localhost:7000
   - GET / return a page that make a post to http:/localhost/malicious with credentials
+  
+  ## Run: 
+   
+```
+docker-compose up -d
+```
+
+Go to localhost, submit the form with a random name
+Close the browser tab
+Click here: http://localhost:7000
+The malicious link should have do malicious things with your previous generated token
